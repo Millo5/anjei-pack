@@ -1,1 +1,1 @@
-© Millo, Schloof, meow, moeow, mrrpr, mrrrpreow mraaoww :3
+© Anjei is stinkie
