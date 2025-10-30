@@ -17,13 +17,19 @@ void main() {
     if (color.a < 0.1) {
         discard;
     }
+    if (vertexColor.g > 0.5) {
+        discard;
+    }
+    if (vertexColor.b > 0.5) {
+        discard;
+    }
 
     // fragColor = vec4(vertexColor.r, vertexColor.r, vertexColor.r, 1.);
     // fragColor = apply_fog(color, sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, FogColor);
     // return;
 
-    vec3 backgroundColor = vec3(0.08235294, 0.07058824, 0.12156863);
-    vec3 foregroundColor = vec3(.5, .5, 1.);
+    vec3 backgroundColor = vec3(0.01, 0.01, 0.03);
+    vec3 foregroundColor = vec3(.3, .3, .6);
     
     float dist = 1. - vertexColor.r;
 

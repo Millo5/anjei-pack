@@ -34,7 +34,7 @@ void main() {
         fragColor = vec4(1., 1., 1., 1.);
         if (isVoid > 1.5) {
             // 150c1f
-            fragColor = vec4(0.08235294, 0.07058824, 0.12156863, 1.);
+            fragColor = vec4(0.01, 0.01, 0.03, 1.);
         }
         return;
     }
