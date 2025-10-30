@@ -18,19 +18,20 @@ void main() {
         discard;
     }
 
-    float dist = 1. - sphericalVertexDistance / 5.;
-    if (dist < 0.) {
-        discard;
-    }
+    // fragColor = vec4(vertexColor.r, vertexColor.r, vertexColor.r, 1.);
+    // fragColor = apply_fog(color, sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, FogColor);
+    // return;
 
     vec3 backgroundColor = vec3(0.08235294, 0.07058824, 0.12156863);
     vec3 foregroundColor = vec3(.5, .5, 1.);
     
-    fragColor = vec4(mix(backgroundColor, foregroundColor, dist), dist);
+    float dist = 1. - vertexColor.r;
+
+    fragColor = vec4(mix(foregroundColor, backgroundColor, dist), 1.);
 
 
-    // fragColor = vec4(1., 1., 1., dist);
+    // // fragColor = vec4(1., 1., 1., dist);
 
-    // fragColor = vec4(.5, .5, 1., dist);
+    // // fragColor = vec4(.5, .5, 1., dist);
     // fragColor = apply_fog(color, sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, FogColor);
 }
